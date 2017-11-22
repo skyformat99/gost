@@ -23,7 +23,7 @@ package command
 import (
 	"fmt"
 
-	"github.com/byte16/gost/common"
+	"github.com/byte16/gost/processor"
 	"github.com/spf13/cobra"
 )
 
@@ -34,7 +34,7 @@ var versionCmd = &cobra.Command{
 	Use:              "version",
 	Short:            "Show version of gost.",
 	Long:             `Show version of gost.`,
-	PersistentPreRun: common.Nop,
+	PersistentPreRun: processor.Nop,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(VERSION)
 	},
@@ -42,5 +42,5 @@ var versionCmd = &cobra.Command{
 
 func init() {
 	RootCmd.AddCommand(versionCmd)
-	versionCmd.SetHelpFunc(common.RunCommonHelp)
+	versionCmd.SetHelpFunc(processor.RunCommonHelp)
 }

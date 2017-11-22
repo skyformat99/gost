@@ -21,7 +21,7 @@
 package command
 
 import (
-	"github.com/byte16/gost/common"
+	"github.com/byte16/gost/processor"
 	"github.com/spf13/cobra"
 )
 
@@ -45,11 +45,11 @@ specify the pathName defined in pathspace.
 
 example: gost build -p foobar -- github.com/baz/qux`,
 	Run: func(cmd *cobra.Command, args []string) {
-		common.RunGoCmd(cmd.Name(), args)
+		processor.RunGoCmd(cmd.Name(), args)
 	},
 }
 
 func init() {
 	RootCmd.AddCommand(buildCmd)
-	buildCmd.SetHelpFunc(common.RunGoHelp)
+	buildCmd.SetHelpFunc(processor.RunGoHelp)
 }

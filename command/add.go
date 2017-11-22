@@ -21,7 +21,7 @@
 package command
 
 import (
-	"github.com/byte16/gost/common"
+	"github.com/byte16/gost/processor"
 	"github.com/spf13/cobra"
 	"os"
 )
@@ -48,9 +48,9 @@ var addCmd = &cobra.Command{
 
 example: gost add foobar '/home/foo/bar:/home/foo/baz' -m`,
 	Args:             cobra.ExactArgs(2),
-	PersistentPreRun: common.Nop,
+	PersistentPreRun: processor.Nop,
 	Run: func(cmd *cobra.Command, args []string) {
-		err := common.AddPath(args[0], args[1], multi)
+		err := processor.AddPath(args[0], args[1], multi)
 		if err != nil {
 			os.Exit(1)
 		}
@@ -60,5 +60,5 @@ example: gost add foobar '/home/foo/bar:/home/foo/baz' -m`,
 func init() {
 	RootCmd.AddCommand(addCmd)
 	addCmd.Flags().BoolVarP(&multi, "multi", "m", false, "path field would contains multiple paths")
-	addCmd.SetHelpFunc(common.RunCommonHelp)
+	addCmd.SetHelpFunc(processor.RunCommonHelp)
 }

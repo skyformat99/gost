@@ -21,7 +21,7 @@
 package command
 
 import (
-	"github.com/byte16/gost/common"
+	"github.com/byte16/gost/processor"
 	"github.com/spf13/cobra"
 )
 
@@ -37,13 +37,13 @@ out all the paths it maintains.
 		These pathNames specified which paths would be listed by gost.
 
 example: gost ls foo bar`,
-	PersistentPreRun: common.Nop,
+	PersistentPreRun: processor.Nop,
 	Run: func(cmd *cobra.Command, args []string) {
-		common.ListPath(args)
+		processor.ListPath(args)
 	},
 }
 
 func init() {
 	RootCmd.AddCommand(lsCmd)
-	lsCmd.SetHelpFunc(common.RunCommonHelp)
+	lsCmd.SetHelpFunc(processor.RunCommonHelp)
 }

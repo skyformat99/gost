@@ -21,7 +21,7 @@
 package command
 
 import (
-	"github.com/byte16/gost/common"
+	"github.com/byte16/gost/processor"
 	"github.com/spf13/cobra"
 )
 
@@ -51,11 +51,11 @@ example: gost build -p foobar -- -json github.com/baz/qux`,
 	//Args:cobra.ArbitraryArgs,
 	//DisableFlagParsing:true,
 	Run: func(cmd *cobra.Command, args []string) {
-		common.RunGoCmd(cmd.Name(), args)
+		processor.RunGoCmd(cmd.Name(), args)
 	},
 }
 
 func init() {
 	RootCmd.AddCommand(listCmd)
-	listCmd.SetHelpFunc(common.RunGoHelp)
+	listCmd.SetHelpFunc(processor.RunGoHelp)
 }

@@ -21,7 +21,7 @@
 package command
 
 import (
-	"github.com/byte16/gost/common"
+	"github.com/byte16/gost/processor"
 	"github.com/spf13/cobra"
 )
 
@@ -38,13 +38,13 @@ at least one pathName as argument.
 
 example: gost rm foo bar`,
 	Args:             cobra.MinimumNArgs(1),
-	PersistentPreRun: common.Nop,
+	PersistentPreRun: processor.Nop,
 	Run: func(cmd *cobra.Command, args []string) {
-		common.RmPath(args)
+		processor.RmPath(args)
 	},
 }
 
 func init() {
 	RootCmd.AddCommand(rmCmd)
-	rmCmd.SetHelpFunc(common.RunCommonHelp)
+	rmCmd.SetHelpFunc(processor.RunCommonHelp)
 }
