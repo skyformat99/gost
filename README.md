@@ -1,4 +1,4 @@
-#Gost
+# Gost
 
 `gost` is a **Simple Tool** for Go which can help you to manage GOPATHs in an incredibly easy and convenient  way. It's very useful for you if you are working on multiple projects at the same time based on isolated workspaces for reasons and tired of switching among different GOPATHs to run Go commands. It can be used on CI/CD tool chain or just a CommandLine compensation or partner for IDEs like Gogland which supports GOPATH management on project level.
 
@@ -166,12 +166,12 @@ See also: go build, go get, go clean.
 
 
 
-##Contributing
+## Contributing
 
 Contributions are greatly appreciated. If you find an issue or want to contribute please file an [issue](https://github.com/byte16/gost/issues) or [create a pull request](https://github.com/byte16/gost/pulls).
 
 
 
-##License
+## License
 
 Gost is released under the MIT license. See [LICENSE](https://github.com/byte16/gost/blob/master/LICENSE)
