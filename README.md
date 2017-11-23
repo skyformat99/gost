@@ -1,10 +1,12 @@
 # Gost
 
-`gost` is a **Simple Tool** for Go which can help you to manage GOPATHs in an incredibly easy and convenient  way. It's very useful for you if you are working on multiple projects at the same time based on isolated workspaces for reasons and tired of switching among different GOPATHs to run Go commands. It can be used on CI/CD tool chain or just a CommandLine compensation or partner for IDEs like Gogland which supports GOPATH management on project level.
+[中文](https://github.com/byte16/gost/blob/master/README_zh.md)
+
+`gost` is a **Simple Tool** for Go which can help you to manage GOPATHs in an incredibly easy and convenient  way. It's very useful for you if you are working on multiple projects in Go at the same time based on isolated workspaces for reasons (for example, these projects have some same dependencies of diffrent versions) and tired of switching among different GOPATHs to run Go commands. It can be used on CI/CD tool chain or just a CommandLine compensation or partner for IDEs like Gogland which supports GOPATH management on project level(Gogland is unable to switch GOPATHs for CommandLine terminals).
 
 
 
-`gost` is a wrapper of Go commands and can help you to run them with the GOPATH set as what you specify in real time. `gost` maintains a repository of paths with a toml file named '.gost.toml' under the executing user's home directory. We can call this repository **pathspace** and it can be managed with some well designed commands like `gost add`, `gost ls` and `gost rm`. You can also specify a '.gost.toml' at other place by using `--config` each time you run `gost`, but it's not recommended.
+`gost` is a wrapper of Go commands and can help you to run them with the GOPATH set as what you specify in real time. `gost` maintains a repository of paths with a toml file named `.gost.toml` under the executing user's home directory. We can call this repository **pathspace** and it can be managed with some well designed commands like `gost add`, `gost ls` and `gost rm`. You can also specify a `.gost.toml`s at other place by using `--config` each time you run `gost`, but it's not recommended for the possibilities to cause confusion.
 
 
 
@@ -16,7 +18,7 @@ Download and install the package with the following command:
 $ go get github.com/byte16/gost
 ```
 
-This will create the gost executable under your `$GOPATH/bin` directory. You can move it to a permanent directory under `$PATH`.
+This will create the gost executable under your `$GOPATH/bin` directory. You can move it to a permanent directory under `$PATH` so that you can use it without caring what the `$GOPATH` would be changed to.
 
 You can also download the gost executable directly from the release page:
 
@@ -34,7 +36,7 @@ Any path that you want to use as GOPATH should be put into pathspace first. You 
 $ gost add foo /home/foobar/bar
 ```
 
- `gost` would ask you to give each path item a name when you add them into pathspace with `gost add`. In the example above, `foo` is just the name for the path `/home/foobar/foo `. With the name you can specify which path to use as GOPATH to run a go command. The name should be unique in the pathspace. If you want to name a new path item with a name that has been used to name other path item which has exists when you run `gost add`, the old path item would be overwritten.
+ `gost` would ask you to give each path item a name when you add them into pathspace with `gost add`. In the example above, `foo` is just the name for the path `/home/foobar/foo `. With the name you can specify which path to use as GOPATH  when running a go command with `gost`. The name should be unique in the pathspace. If you want to name a new path item with a name that has been used to name other path item which has exists when you run `gost add`, the old path item would be overwritten.
 
 **Note**: Before you add a path into pathspace, you should first make sure that the directory that the path represents exists. `gost` supports symbloic links well.
 
@@ -89,7 +91,7 @@ Normally before without `gost`, you need to set `/home/foobar/bar` as GOPATH wit
 $ gost get -p foo -- -u github.com/byte16/gost
 ```
 
-The jobs of switching GOPATH and running `go get` would all be took care of by `gost`. You would never experience any differences between the two ways except **the simpleness and convenience of using `gost`**. It could be even more simpler if '/home/foo/bar' has existed in gost's pathspace as a single path and you are currently under `/home/foo/bar` or any sub directories of it, you can just run `gost get` command without specifying foobar with `--path` or `-p` like:
+The jobs of switching GOPATH and running `go get` would all be took care of by `gost`. You would never experience any differences between the two ways except **the simpleness and convenience of using `gost`**. It could be even more simpler if `/home/foo/bar` has existed in gost's pathspace as a single path and you are currently under `/home/foo/bar/src` or any sub directories of it, you can just run `gost get` command without specifying `foobar` with `--path` or `-p` like:
 
 ```
 $ gost get -- -u github.com/byte16/gost
@@ -97,7 +99,7 @@ $ gost get -- -u github.com/byte16/gost
 
 `gost` would detect that itself.
 
-But if you want to run a go command with a multiple path as GOPATH like `/home/foobar/foo:/home/foobar/bar`, the `—path`(or `-p` for short) should never be omitted.
+But if you want to run a go command with a multiple path as GOPATH like `/home/foobar/foo:/home/foobar/bar`, the `--path`(or `-p` for short) should never be omitted.
 
 
 
@@ -122,7 +124,6 @@ command has the same name with its underlying Go command. They are listed below:
         run         compile and run Go program
         test        test packages
         tool        run specified go tool
-        version     print Go version
         vet         run go tool vet on packages
 For the details about how to use each of them with `gost`, just run `gost help cmdName`. For example:
 
@@ -168,7 +169,7 @@ See also: go build, go get, go clean.
 
 ## Contributing
 
-Contributions are greatly appreciated. If you find an issue or want to contribute please file an [issue](https://github.com/byte16/gost/issues) or [create a pull request](https://github.com/byte16/gost/pulls).
+Contributions are greatly appreciated. If you find an issue or want to contribute please file an [issue](https://github.com/byte16/gost/issues) or create a [pull request](https://github.com/byte16/gost/pulls).
 
 
 
