@@ -36,7 +36,7 @@ Any path that you want to use as GOPATH should be put into pathspace first. You 
 $ gost add foo /home/foobar/bar
 ```
 
- `gost` would ask you to give each path item a name when you add them into pathspace with `gost add`. In the example above, `foo` is just the name for the path `/home/foobar/foo `. With the name you can specify which path to use as GOPATH  when running a go command with `gost`. The name should be unique in the pathspace. If you want to name a new path item with a name that has been used to name other path item which has exists when you run `gost add`, the old path item would be overwritten.
+ `gost` would ask you to give each path item a name when you add them into pathspace with `gost add`. In the example above, `foo` is just the name for the path `/home/foobar/bar `. With the name you can specify which path to use as GOPATH  when running a go command with `gost`. The name should be unique in the pathspace. If you want to name a new path item with a name that has been used to name other path item which has exists when you run `gost add`, the old path item would be overwritten.
 
 **Note**: Before you add a path into pathspace, you should first make sure that the directory that the path represents exists. `gost` supports symbloic links well.
 

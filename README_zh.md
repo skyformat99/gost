@@ -35,7 +35,7 @@ https://github.com/byte16/gost/releases
 $ gost add foo /home/foobar/bar
 ```
 
-当你通过`gost add`向pathspace中添加路径的时候，`gost`会要求你为所添加的路径取一个名称。 在上面的示例中，`foo`就是为路径`/home/foobar/foo `所取的名称。在使用`gost`来运行一个go命令的时候，你可以通过所取的名称来指定使用哪个路径作为GOPATH。每个名称在pathspace中都应该是唯一的。如果一个名称已经在pathspace中用于命名一个路径，当在运行`gost add`命令时你将这个名称再用于命名新的路径的时候，那么pathspace中的原有路径条目信息将会被覆盖。
+当你通过`gost add`向pathspace中添加路径的时候，`gost`会要求你为所添加的路径取一个名称。 在上面的示例中，`foo`就是为路径`/home/foobar/bar `所取的名称。在使用`gost`来运行一个go命令的时候，你可以通过所取的名称来指定使用哪个路径作为GOPATH。每个名称在pathspace中都应该是唯一的。如果一个名称已经在pathspace中用于命名一个路径，当在运行`gost add`命令时你将这个名称再用于命名新的路径的时候，那么pathspace中的原有路径条目信息将会被覆盖。
 
 **注意**: 在你把一个路径添加到pathspace之前，你需要首先确认这个路径所代表的目录确实存在。`gost`对包含软链接的路径支持良好。
 
