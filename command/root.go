@@ -174,8 +174,12 @@ func initConfig() {
 
 	// If a config file is found, read it in.
 	if err := viper.ReadInConfig(); err == nil {
-		cfg.LoadTomlCfg()
-	} else if cfgFile!="" {
+		err = cfg.LoadTomlCfg()
+		if err != nil {
+			fmt.Printf("[FATAL] %s", err.Error())
+			os.Exit(1)
+		}
+	} else if cfgFile != "" {
 		fmt.Printf(`[FATAL] There seems to be something wrong about config file %s:
 %s
 Please fix it first.

@@ -105,27 +105,26 @@ type GoPath struct {
 	Multi bool `toml:"multi"`
 }
 
-func LoadTomlCfg() {
+func LoadTomlCfg() error {
 	err := viper.Unmarshal(&GostToml)
 	if err != nil {
-		fmt.Printf("[FATAL] failed to load .god.yml: %s\n", err.Error())
-		os.Exit(1)
+		return fmt.Errorf("failed to load .gost.toml: %s\n", err.Error())
 	}
 
 	for i, pathItem := range GostToml.GoPaths {
 		if !validateCfg(&pathItem) {
-			fmt.Printf(`[FATAL] invalid GoPath item found in %s, pleas check:
+			return fmt.Errorf(`invalid GoPath item found in %s, pleas check:
   - Name: %s
   - Path: %s
   - RealPath: %s
 `,
 				ConfigPath, pathItem.Name, pathItem.Path, pathItem.RealPath)
-			os.Exit(1)
 		}
 		PathMap[pathItem.Name] = &GostToml.GoPaths[i]
 	}
 
 	PathList = GostToml.GoPaths
+	return nil
 }
 
 // Try to check if a given GoPath is valid
