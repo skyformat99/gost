@@ -2,7 +2,7 @@
 
 [English](https://github.com/byte16/gost/blob/master/README.md)
 
-`gost` 是一个用于Go语言的简单工具。它可以以一种简洁轻便的方式来帮助你管理GOPATH并运行Go命令。如果你同时开发多个Go项目，并且因为某些原因这些项目基于相互隔离的不同空间（例如这些项目基于某些相同依赖的不同版本），这导致你在运行Go命令的时候需要在不同的GOPATH间来回切换，那么`gost`对于你来说将非常有用。它可以用于持续开发和持续集成的工具链中，也可以作为Gogland这样可以在项目层级来管理GOPATH的集成开发工具在命令行方面的补偿（Gogland无法为命令行终端切换GOPATH）。
+`gost` 是一个用于Go语言的简单工具。它可以以一种简洁轻便的方式来帮助你管理GOPATH并运行Go命令。如果你同时开发多个Go项目，并且因为某些原因这些项目基于相互隔离的不同工作空间（例如这些项目基于某些相同依赖的不同版本），这导致你在运行Go命令的时候需要在不同的GOPATH间来回切换，那么`gost`对于你来说将非常有用。它可以用于持续开发和持续集成的工具链中，也可以作为Gogland这样可以在项目层级来管理GOPATH的集成开发工具在命令行方面的补偿（Gogland无法为命令行终端切换GOPATH）。
 
 
 
@@ -90,7 +90,7 @@ $ go get -u github.com/byte16/gost
 $ gost get -p foo -- -u github.com/byte16/gost
 ```
 
-切换GOPATH和运行`go get`命令的任务完全由`gost`来进行执行。除了使用`gost`所带来的简便，你体会不到这两种方式之间在功能上会有什么差异。然而，你还可以使操作更加简单。如果`/home/foo/bar`已经作为一条单目录条目被添加到pathspace中了，并且你当前的工作目录位于`/home/foo/bar/src`路径下的任意层级的子目录，你可以运行`gost get`而无需通过`--path`或`-p`来指定`foobar`，操作如下：
+切换GOPATH和运行`go get`命令的任务完全由`gost`来进行执行。除了使用`gost`所带来的简便，你体会不到这两种方式之间在功能上会有什么差异。然而，你还可以使操作更加简单。如果`/home/foobar/bar`已经作为一条单目录条目被添加到pathspace中了，并且你当前的工作目录位于`/home/foobar/bar/src`路径下的任意层级的子目录，你可以运行`gost get`而无需通过`--path`或`-p`来指定`foo`，操作如下：
 
 ```
 $ gost get -- -u github.com/byte16/gost

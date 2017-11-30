@@ -91,7 +91,7 @@ Normally before without `gost`, you need to set `/home/foobar/bar` as GOPATH wit
 $ gost get -p foo -- -u github.com/byte16/gost
 ```
 
-The jobs of switching GOPATH and running `go get` would all be took care of by `gost`. You would never experience any differences between the two ways except **the simpleness and convenience of using `gost`**. It could be even more simpler if `/home/foo/bar` has existed in gost's pathspace as a single path and you are currently under `/home/foo/bar/src` or any sub directories of it, you can just run `gost get` command without specifying `foobar` with `--path` or `-p` like:
+The jobs of switching GOPATH and running `go get` would all be took care of by `gost`. You would never experience any differences between the two ways except **the simpleness and convenience of using `gost`**. It could be even more simpler if `/home/foobar/bar` has existed in gost's pathspace as a single path and you are currently under `/home/foobar/bar/src` or any sub directories of it, you can just run `gost get` command without specifying `foo` with `--path` or `-p` like:
 
 ```
 $ gost get -- -u github.com/byte16/gost
