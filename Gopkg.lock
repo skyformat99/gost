@@ -1,0 +1,129 @@
+[[projects]]
+  name = "github.com/spf13/cobra"
+  packages = ["."]
+  revision = "19e54c4a2b8a78c9d54b2bed61b1a6c5e1bfcf6f"
+  source = "https://github.com/spf13/cobra"
+
+[[projects]]
+  name = "golang.org/x/text"
+  packages = ["unicode/norm", "transform"]
+  revision = "836efe42bb4aa16aaa17b9c155d8813d336ed720"
+  source = "https://github.com/golang/text"
+
+[[projects]]
+  name = "github.com/spf13/jwalterweatherman"
+  packages = ["."]
+  revision = "0efa5202c04663c757d84f90f5219c1250baf94f"
+  source = "https://github.com/spf13/jwalterweatherman"
+
+[[projects]]
+  name = "github.com/BurntSushi/toml"
+  packages = ["."]
+  revision = "a368813c5e648fee92e5f6c30e3944ff9d5e8895"
+  source = "https://github.com/BurntSushi/toml"
+
+[[projects]]
+  name = "github.com/pkg/errors"
+  packages = ["."]
+  revision = "c605e284fe17294bda444b34710735b29d1a9d90"
+  source = "https://github.com/pkg/errors"
+
+[[projects]]
+  name = "github.com/magiconair/properties"
+  packages = ["."]
+  version = "v1.7.3"
+  revision = "be5ece7dd465ab0765a9682137865547526d1dfb"
+  source = "https://github.com/magiconair/properties"
+
+[[projects]]
+  name = "gopkg.in/yaml.v2"
+  packages = ["."]
+  revision = "25c4ec802a7d637f88d584ab26798e94ad14c13b"
+  source = "https://gopkg.in/yaml.v2"
+
+[[projects]]
+  name = "github.com/fsnotify/fsnotify"
+  packages = ["."]
+  revision = "4da3e2cfbabc9f751898f250b49f2439785783a1"
+  source = "https://github.com/fsnotify/fsnotify"
+
+[[projects]]
+  name = "github.com/spf13/cast"
+  packages = ["."]
+  version = "v1.1.0"
+  revision = "acbeb36b902d72a7a4c18e8f3241075e7ab763e4"
+  source = "https://github.com/spf13/cast"
+
+[[projects]]
+  name = "github.com/pelletier/go-toml"
+  packages = ["."]
+  revision = "69d355db5304c0f7f809a2edc054553e7142f016"
+  source = "https://github.com/pelletier/go-toml"
+
+[[projects]]
+  name = "github.com/cpuguy83/go-md2man"
+  packages = ["md2man"]
+  version = "v1.0.7"
+  revision = "1d903dcb749992f3741d744c0f8376b4bd7eb3e1"
+  source = "https://github.com/cpuguy83/go-md2man"
+
+[[projects]]
+  name = "github.com/spf13/viper"
+  packages = ["."]
+  revision = "25b30aa063fc18e48662b86996252eabdcf2f0c7"
+  source = "https://github.com/spf13/viper"
+
+[[projects]]
+  name = "github.com/russross/blackfriday"
+  packages = ["."]
+  revision = "6d1ef893fcb01b4f50cb6e57ed7df3e2e627b6b2"
+  source = "https://github.com/russross/blackfriday"
+
+[[projects]]
+  name = "github.com/spf13/pflag"
+  packages = ["."]
+  version = "v1.0.0"
+  revision = "e57e3eeb33f795204c1ca35f56c44f83227c6e66"
+  source = "https://github.com/spf13/pflag"
+
+[[projects]]
+  name = "github.com/mitchellh/mapstructure"
+  packages = ["."]
+  revision = "d0303fe809921458f417bcf828397a65db30a7e4"
+  source = "https://github.com/mitchellh/mapstructure"
+
+[[projects]]
+  name = "golang.org/x/sys"
+  packages = ["unix"]
+  revision = "a646d33e2ee3172a661fc09bca23bb4889a41bc8"
+  source = "https://github.com/golang/sys"
+
+[[projects]]
+  name = "github.com/spf13/afero"
+  packages = ["."]
+  revision = "9be650865eab0c12963d8753212f4f9c66cdcf12"
+  source = "https://github.com/spf13/afero"
+
+[[projects]]
+  name = "github.com/pkg/sftp"
+  packages = ["."]
+  revision = "f6ec992e480925807f691a585c4c36841357ef89"
+  source = "https://github.com/pkg/sftp.git"
+
+[[projects]]
+  name = "github.com/mitchellh/go-homedir"
+  packages = ["."]
+  revision = "b8bc1bf767474819792c23f32d8286a45736f1c6"
+  source = "https://github.com/mitchellh/go-homedir"
+
+[[projects]]
+  name = "github.com/hashicorp/hcl"
+  packages = ["."]
+  revision = "392dba7d905ed5d04a5794ba89f558b27e2ba1ca"
+  source = "https://github.com/hashicorp/hcl"
+
+[solve-meta]
+  analyzer-name = "god"
+  analyzer-version = "v0.1.0"
+  solver-name = "god"
+  solver-version = "v0.1.0"
